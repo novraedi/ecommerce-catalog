@@ -1,0 +1,283 @@
+:root{
+    --blue:#002772;
+    --pink:#FDE2FF;
+    --black:#1E1E1E;
+    --purple:#720060;
+    --light-blue:#D6E6FF;
+    --grey:#3F3F3F;
+    --light-grey:#DCDCDC;
+    --white:#FFFFFF;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+.bg-pattern-women{
+    width: 100%;
+    height: 70vh;
+    background-color: var(--pink);
+    background-image: url(../assets/bg-tr.png);
+}
+.bg-pattern-men{
+    width: 100%;
+    height: 70vh;
+    background-color: var(--light-blue);
+    background-image: url(../assets/bg-tr.png);
+}
+.bg-unavailable{
+    width: 100%;
+    height: 70vh;
+    background-color: var(--light-grey);
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Theme Men */
+.card.theme-men{
+    width: 80%;
+    height: max-content;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+}
+.card.theme-men h2{
+    color: var(--blue);
+}
+.card.theme-men .for-rate.active{
+    background-color:var(--blue);
+}
+.card.theme-men .btn{
+    background-color: var(--blue);
+    color: var(--white);
+    border-color: var(--blue);
+}
+.card.theme-men .btn-reverse{
+    color: var(--blue);
+    border-color: var(--blue);
+}
+
+/* Theme Women */
+.card.theme-women{
+    width: 80%;
+    height: max-content;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+}
+.card.theme-women h2{
+    color: var(--purple);
+}
+.card.theme-women .for-rate.active{
+    background-color:var(--purple);
+}
+.card.theme-women .btn{
+    background-color: var(--purple);
+    color: var(--white);
+    border-color: var(--purple);
+}
+.card.theme-women .btn-reverse{
+    color: var(--purple);
+    border-color: var(--purple);
+}
+/* Theme-Unavailable */
+.card.theme-unavailable{
+    width: 80%;
+    height: max-content;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+}
+.card.theme-unavailable button{
+    color: var(--grey);
+    border-color: var(--grey);
+}
+.container-card{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.container-card .unavailable{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-card .bg-sad{
+    background-image: url(../assets/sad-face.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 500px;
+    scale: 0.7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.image-product{
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image-product img{
+    scale: 0.7;
+    object-fit: cover;
+}
+
+.desc-product{
+    width: 55%;
+    padding: 20px;
+}
+.desc{
+    height: 150px;
+}
+.rating{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.btn{
+    padding: 10px 30px 10px 30px;
+    font-weight: 800;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 5px;
+    width: 40%;
+    cursor: pointer;
+}
+.btn-reverse{
+    padding: 10px 30px 10px 30px;
+    background-color: #FFFFFF;
+    color: var(--purple);
+    font-weight: 800;
+    border-width: 2px;
+    border-color: var(--purple);
+    border-style: solid;
+    border-radius: 5px;
+    width: 40%;
+    cursor: pointer;
+}
+.for-rate{
+    height: 20px;
+    width: 20px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+.for-rate.active{
+    background-color: #720060;
+}
+.container-rate{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+.price{
+    font-weight: 800;
+    font-size: 20px;
+    color: var(--purple);
+}
+
+/* skeleton */
+.card-skeleton {
+    width: 80%;
+    height: 400px;
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1)
+  }
+  .card-skeleton__container{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+  }
+  .card-skeleton__image{
+    width: 35%;
+    height: 100%;
+    background-color: var(--light-grey);
+    border-radius: 10px;
+    animation: pulse 2s infinite ease-in-out;
+  }
+  .card-skeleton__content{
+    width: 65%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .card-skeleton__content .card-skeleton__title{
+    width: 50%;
+    height: 30px;
+    background-color: var(--light-grey);
+    border-radius: 10px;
+    animation: pulse 2s infinite ease-in-out;
+  }
+    .card-skeleton__content .card-skeleton__rating{
+        width: 100%;
+        height: 20px;
+        background-color: var(--light-grey);
+        border-radius: 10px;
+        margin-bottom: 30px;
+        animation: pulse 2s infinite ease-in-out;
+    }
+    .card-skeleton__desc.space{
+        margin-bottom: 100px;
+    }
+  .card-skeleton__content .card-skeleton__desc{
+    width: 100%;
+    height: 20px;
+    background-color: var(--light-grey);
+    border-radius: 10px;
+    animation: pulse 2s infinite ease-in-out;
+  }
+  .card-skeleton__content .card-skeleton__price{
+    width: 20%;
+    height: 30px;
+    background-color: var(--light-grey);
+    border-radius: 10px;
+    animation: pulse 2s infinite ease-in-out;
+  }
+  .card-skeleton__content .card-skeleton__buttoncol{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .card-skeleton__content .card-skeleton__button{
+    width: 45%;
+    height: 30px;
+    background-color: var(--light-grey);
+    border-radius: 10px;
+    animation: pulse 2s infinite ease-in-out;
+  }
+  @keyframes pulse {
+    0% {
+        background-color: #bbb;
+    }
+
+    50% {
+        background-color: #CBD5E1;
+    }
+
+    100% {
+        background-color: #bbb;
+    }
+}
