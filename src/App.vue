@@ -1,17 +1,16 @@
 <template>
-  <HelloWorld/>
+  <ProductDisplay />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ProductDisplay from "./components/ProductDisplay.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    ProductDisplay,
+  },
+};
 </script>
 
-<style scope src="../src/assets/style.css">
-</style>
+<style scope src="../src/assets/style.css"></style>
