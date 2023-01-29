@@ -115,6 +115,7 @@ export default {
       loading: true,
     };
   },
+  // Lifecycle
   created() {
     setTimeout(() => {
       this.fetchData();
@@ -127,24 +128,17 @@ export default {
         .then((response) => {
           console.log(response.data);
           this.product = response.data;
+          //Loading Skeleton
           this.loading = false;
 
           //Pembulatan rating
           this.rating = Math.round(response.data.rating.rate);
+          //Increment index
           this.index++;
+          //Reset index
           if (this.index > 20) {
             this.index = 1;
           }
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    },
-    async getData() {
-      await axios
-        .get("https://fakestoreapi.com/products")
-        .then((response) => {
-          console.log(response.data);
         })
         .catch((error) => {
           console.log(error);
